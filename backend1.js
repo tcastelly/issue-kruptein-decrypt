@@ -7,6 +7,7 @@ const { secret } = require('./secret');
 const store = new (MemCachedStore(session))({
   hosts: ['localhost'],
   secret,
+  use_safe_timing: false,
 });
 
 const sessionConfig = {
