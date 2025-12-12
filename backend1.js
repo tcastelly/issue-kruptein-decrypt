@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
   }
 
   req.session.cpt += 1;
+
   res.send(`Hello World! (${req.session.cpt})
 SessionId: ${req.session.id}`);
 });
