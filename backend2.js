@@ -41,8 +41,6 @@ const server = createServer(async (request, response) => {
     });
   });
 
-  console.log(typeof decryptedData);
-
   const session = JSON.parse(decryptedData);
 
   response.writeHead(200, { 'Content-Type': 'text/plain' });
