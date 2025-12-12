@@ -33,6 +33,4 @@ node backend2.js l585NtMKCAkMsDYmq-ngZtsRHwFmqktJ
 ![alt res](res.png)
 
 
-This work until `kruptein@3.0.9`. After this it's not possible to decrypt the session:
-> Error in crypto.get: Encrypted session was tampered with! (timing) #16
-
+The `package.json` fix the kruptein depency in `connect-memcached`

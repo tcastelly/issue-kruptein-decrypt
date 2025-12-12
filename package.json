@@ -7,7 +7,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:backend1": "node backend1.js",
+    "start:backend2": "node backend2.js 58hYHIhq2DwJlmxW_rIsaX7-0a_Byjfq"
   },
   "dependencies": {
     "connect-memcached": "^2.0.0",
@@ -15,5 +16,8 @@
     "express-session": "^1.18.2",
     "kruptein": "3.1.5",
     "memcached": "^2.2.2"
+  },
+  "overrides": {
+    "kruptein": "3.1.5"
   }
 }

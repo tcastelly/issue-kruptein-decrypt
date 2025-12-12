@@ -7,9 +7,8 @@ const { backend2Port } = require('./config');
 const sessionId = process.argv[2];
 
 const kruptein = Kruptein({
-  algorithm: 'aes-256-gcm',
+  // algorithm: 'aes-256-gcm',
   hashing: 'sha512',
-  use_safe_timing: false,
 });
 
 const server = createServer(async (request, response) => {

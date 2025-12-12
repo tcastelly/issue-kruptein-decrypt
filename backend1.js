@@ -7,7 +7,8 @@ const { secret } = require('./secret');
 const store = new (MemCachedStore(session))({
   hosts: ['localhost'],
   secret,
-  use_safe_timing: false,
+  // algorithm: 'aes-256-gcm',
+  hashing: 'sha512',
 });
 
 const sessionConfig = {
