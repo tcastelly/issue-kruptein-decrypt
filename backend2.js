@@ -9,6 +9,7 @@ const sessionId = process.argv[2];
 const kruptein = Kruptein({
   algorithm: 'aes-256-gcm',
   hashing: 'sha512',
+  use_safe_timing: false,
 });
 
 const server = createServer(async (request, response) => {
@@ -23,7 +24,6 @@ const server = createServer(async (request, response) => {
       resolve(data);
     });
   });
-
 
   const decryptedData = await new Promise((resolve, reject) => {
     kruptein.get(secret, encryptedData, (err, ct) => {
@@ -40,6 +40,8 @@ const server = createServer(async (request, response) => {
       resolve(ct);
     });
   });
+
+  console.log(typeof decryptedData);
 
   const session = JSON.parse(decryptedData);
 

@@ -13,7 +13,7 @@
     "connect-memcached": "^2.0.0",
     "express": "^5.2.1",
     "express-session": "^1.18.2",
-    "kruptein": "3.0.9",
+    "kruptein": "3.1.5",
     "memcached": "^2.2.2"
   }
 }
